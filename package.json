@@ -4,5 +4,6 @@
   "description": "Convert Hakka characters from PUA to Unicode",
   "main": "lib/index.js",
   "author": "Hsu Subang <m80126colin@gmail.com>",
-  "license": "MIT"
+  "license": "MIT",
+  "publishConfig": { "registry": "https://npm.pkg.github.com/" }
 }
