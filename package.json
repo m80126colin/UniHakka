@@ -1,9 +1,19 @@
 {
-  "name": "uni-hakka",
+  "name": "@m80126colin/uni-hakka",
   "version": "0.1.0",
-  "description": "Convert Hakka characters from PUA to Unicode",
+  "description": "Convert Hakka characters from PUA to Unicode.",
   "main": "lib/index.js",
-  "author": "Hsu Subang <m80126colin@gmail.com>",
+  "author": "Hsu Subang<m80126colin@gmail.com>",
   "license": "MIT",
-  "publishConfig": { "registry": "https://npm.pkg.github.com/" }
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/m80126colin/UniHakka.git"
+  },
+  "bugs": {
+    "url": "https://github.com/m80126colin/UniHakka/issues"
+  },
+  "homepage": "https://github.com/m80126colin/UniHakka#readme",
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com/"
+  }
 }
