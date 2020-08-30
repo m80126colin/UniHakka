@@ -30,6 +30,8 @@ const hakka = new UniHakka()
 hakka.convert('來去') // 𫟧來𫟧去
 ```
 
+## API
+
 ### `hakka.convert(text : string) -> string`
 
 將 `text` 中存在於私有區之客語字編碼，轉換為統一 Unicode 編碼。
@@ -55,3 +57,20 @@ hakka.inspect('來去')
   }
 ]
 ```
+
+## Sources 資料來源
+
+* 教育部《臺灣客家語常用詞辭典》
+* 客家委員會 2009 年《客語造字檔內碼表》
+* 客家委員會《客語能力認證基本詞彙》
+* 2011-2019 年全國語文競賽客家語朗讀
+
+## References 參考資料
+
+* [CHISE IDS 漢字検索](http://www.chise.org/ids-find)
+* [CNS11643 中文全字庫](https://www.cns11643.gov.tw/index.jsp)
+* [本土語言外字表 - 再會豆腐字](https://tauhu.tw/gua-ji-pio/)
+
+## License 授權
+
+MIT
