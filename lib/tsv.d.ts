@@ -1,4 +1,6 @@
 declare module '*.tsv' {
-  const content : string;
-  export default content;
+  import { UniHakkaTSVRow } from '@/lib/types'
+
+  const data : UniHakkaTSVRow[];
+  export default data;
 }
