@@ -7,7 +7,7 @@
 | 𠊎 (U+2028E) |  (U+E002) |  (U+E51F) |
 | 𫣆 (U+2B8C6) |  (U+E000) |  (U+E700) |
 
-本套件提供 340 字，約 440 餘種私有碼轉換，詳細表格至 [Google Spreadsheet](https://docs.google.com/spreadsheets/d/1_OLALrobGqdlMRoBZIgVmx5AnsixFJdgDeqHdrJAwCA/edit?usp=sharing)。
+本套件提供 340 字，約 440 餘種私有碼轉換，詳細表格至 [UniHakka 客家語私有碼對應表](https://docs.google.com/spreadsheets/d/1_OLALrobGqdlMRoBZIgVmx5AnsixFJdgDeqHdrJAwCA/edit?usp=sharing)。
 
 ## Installation 安裝
 
@@ -46,7 +46,7 @@ hakka.inspect('來去')
 
 回傳值為
 
-```
+``` js
 [
   Inspector {
     position: [ 0, 2 ],
