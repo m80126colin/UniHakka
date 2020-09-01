@@ -7,18 +7,18 @@
 | 𠊎 (U+2028E) |  (U+E002) |  (U+E51F) |
 | 𫣆 (U+2B8C6) |  (U+E000) |  (U+E700) |
 
-本套件提供 340 字，約 440 餘種私有碼轉換，詳細表格至 [Google Spreadsheet](https://docs.google.com/spreadsheets/d/1_OLALrobGqdlMRoBZIgVmx5AnsixFJdgDeqHdrJAwCA/edit?usp=sharing)。
+本套件提供 340 字，約 440 餘種私有碼轉換，詳細表格至 [UniHakka 客家語私有碼對應表](https://docs.google.com/spreadsheets/d/1_OLALrobGqdlMRoBZIgVmx5AnsixFJdgDeqHdrJAwCA/edit?usp=sharing)。
 
 ## Installation 安裝
 
 ```
-yarn add uni-hakka
+yarn add uni-hakka @m80126colin/uni-hakka --registry=https://npm.pkg.github.com
 ```
 
 or
 
 ```
-npm install --save uni-hakka
+npm install --save @m80126colin/uni-hakka --registry=https://npm.pkg.github.com
 ```
 
 ## Usage 使用方法
@@ -36,7 +36,7 @@ hakka.convert('來去') // 𫟧來𫟧去
 
 將 `text` 中存在於私有區之客語字編碼，轉換為統一 Unicode 編碼。
 
-### `hakka.inspect(text : string) -> Inspector[]`
+### `hakka.inspect(text : string) -> UniHakkaInspector[]`
 
 檢查 `text` 內是否存在私有字。
 
@@ -46,7 +46,7 @@ hakka.inspect('來去')
 
 回傳值為
 
-```
+``` js
 [
   Inspector {
     position: [ 0, 2 ],

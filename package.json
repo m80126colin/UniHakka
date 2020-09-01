@@ -1,10 +1,17 @@
 {
   "name": "@m80126colin/uni-hakka",
-  "version": "0.2.0",
+  "version": "0.3.0",
   "description": "Convert Hakka characters from PUA to Unicode.",
-  "main": "lib/index.js",
+  "main": "dist/index.js",
   "author": "Hsu Subang<m80126colin@gmail.com>",
   "license": "MIT",
+  "scripts": {
+    "clean": "rm -rf dist/",
+    "prebuild": "yarn clean",
+    "build": "BABEL_ENV=production webpack && tsc",
+    "prepublish": "yarn build",
+    "test": "BABEL_ENV=development babel-node --extensions '.ts' test/"
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/m80126colin/UniHakka.git"
@@ -15,5 +22,25 @@
   "homepage": "https://github.com/m80126colin/UniHakka#readme",
   "publishConfig": {
     "registry": "https://npm.pkg.github.com/"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.10.5",
+    "@babel/core": "^7.11.4",
+    "@babel/node": "^7.10.5",
+    "@babel/plugin-proposal-class-properties": "^7.10.4",
+    "@babel/preset-env": "^7.11.0",
+    "@babel/preset-typescript": "^7.10.4",
+    "@types/node": "^14.6.2",
+    "babel-loader": "^8.1.0",
+    "babel-plugin-module-resolver": "^4.0.0",
+    "babel-plugin-transform-import-to-read-file-sync": "^0.2.2",
+    "raw-loader": "^4.0.1",
+    "terser-webpack-plugin": "^4.1.0",
+    "typescript": "^4.0.2",
+    "webpack": "^4.44.1",
+    "webpack-cli": "^3.3.12"
+  },
+  "dependencies": {
+    "@babel/polyfill": "^7.10.4"
   }
 }
