@@ -1,4 +1,4 @@
-import UniHakka from '@/lib';
+import UniHakka from '../lib';
 
 const hakka = new UniHakka()
 
