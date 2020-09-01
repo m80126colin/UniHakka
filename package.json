@@ -10,7 +10,9 @@
     "prebuild": "yarn clean",
     "build": "BABEL_ENV=production webpack && tsc",
     "prepublish": "yarn build",
-    "test": "BABEL_ENV=development babel-node --extensions '.ts' test/"
+    "pretest": "yarn test:clean",
+    "test:clean": "rm -rf test-dist/",
+    "test": "BABEL_ENV=development TESTBUILD=true webpack && node test-dist/index.js"
   },
   "repository": {
     "type": "git",

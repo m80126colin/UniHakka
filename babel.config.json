@@ -21,10 +21,6 @@
       "plugins": [
         "@babel/proposal-class-properties",
         [
-          "babel-plugin-transform-import-to-read-file-sync",
-          { "test": "\\.tsv$", "options": "utf-8" }
-        ],
-        [
           "module-resolver",
           { "root": ["."], "alias": { "@": "." } }
         ]
