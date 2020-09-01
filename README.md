@@ -12,13 +12,13 @@
 ## Installation 安裝
 
 ```
-yarn add uni-hakka
+yarn add uni-hakka @m80126colin/uni-hakka --registry=https://npm.pkg.github.com
 ```
 
 or
 
 ```
-npm install --save uni-hakka
+npm install --save @m80126colin/uni-hakka --registry=https://npm.pkg.github.com
 ```
 
 ## Usage 使用方法
@@ -36,7 +36,7 @@ hakka.convert('來去') // 𫟧來𫟧去
 
 將 `text` 中存在於私有區之客語字編碼，轉換為統一 Unicode 編碼。
 
-### `hakka.inspect(text : string) -> Inspector[]`
+### `hakka.inspect(text : string) -> UniHakkaInspector[]`
 
 檢查 `text` 內是否存在私有字。
 
