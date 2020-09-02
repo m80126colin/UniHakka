@@ -1,19 +1,25 @@
 const path = require('path');
 const TerserPlugin = require('terser-webpack-plugin');
+const TsconfigPathsPlugin = require('tsconfig-paths-webpack-plugin');
 
-let mode = 'production';
+let mode  = 'production';
 let entry = './lib/index.ts';
 let outputPath = path.resolve(__dirname, 'dist');
+let configFile = path.resolve(__dirname, 'tsconfig.prod.json');
+let devtool = false;
 
-if (process.env.TESTBUILD) {
-  mode = 'development';
+if ('development' === process.env.PROJ_ENV) {
+  mode  = 'development';
   entry = './test/index.ts';
   outputPath = path.resolve(__dirname, 'test-dist');
+  configFile = path.resolve(__dirname, 'tsconfig.dev.json');
+  devtool = 'source-map';
 }
 
 module.exports = {
   entry: entry,
-  mode: mode,
+  mode:  mode,
+  devtool: devtool,
   output: {
     path: outputPath,
     library: '@m80126colin/uni-hakka',
@@ -21,7 +27,16 @@ module.exports = {
     filename: 'index.js'
   },
   resolve: {
-    extensions: ['.ts']
+    extensions: ['.ts', '.tsv'],
+    plugins: [
+      new TsconfigPathsPlugin({ configFile: configFile })
+    ]
+  },
+  resolveLoader: {
+    modules: [
+      path.resolve(__dirname, 'webpack/loaders'),
+      'node_modules',
+    ],
   },
   optimization: {
     minimizer: [
@@ -32,12 +47,6 @@ module.exports = {
         }
       })
     ]
-  },
-  resolveLoader: {
-    modules: [
-      path.resolve(__dirname, 'webpack/loaders'),
-      'node_modules',
-    ],
   },
   module: {
     rules: [
@@ -51,7 +60,8 @@ module.exports = {
         test: /\.ts$/,
         exclude: /node_modules/,
         use: {
-          loader: 'babel-loader'
+          loader: 'ts-loader',
+          options: { configFile: configFile }
         }
       }
     ]
