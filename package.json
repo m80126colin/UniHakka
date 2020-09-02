@@ -3,6 +3,7 @@
   "version": "0.3.1",
   "description": "Convert Hakka characters from PUA to Unicode.",
   "main": "dist/index.js",
+  "types": "dist/index.d.ts",
   "author": "Hsu Subang<m80126colin@gmail.com>",
   "license": "MIT",
   "scripts": {
