@@ -1,4 +1,3 @@
-import { formatTSV } from './tool';
 import {
   UniHakkaInspector,
   UniHakkaInspectorOptions
@@ -36,14 +35,14 @@ class UniHakka {
     hakka.unicodeToCNS11643 = new Map()
     hakka.puaInfo           = new Map()
     // process table.tsv
-    const [ x, ...tableRows ] = formatTSV(table)
+    const [ x, ...tableRows ] = table
     tableRows.map(({ pua, unicode, description }) => {
       hakka.puaToUnicode.set(pua, unicode)
       hakka.unicodeToCNS11643.set(unicode, unicode)
       hakka.puaInfo.set(pua, description)
     })
     // process cns11643.tsv
-    const [ y, ...cnsRows ] = formatTSV(cns)
+    const [ y, ...cnsRows ] = cns
     cnsRows.map(({ pua, unicode, description }) => {
       hakka.puaToUnicode.set(pua, unicode)
       hakka.unicodeToCNS11643.set(unicode, pua)

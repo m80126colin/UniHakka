@@ -1,0 +1,15 @@
+{
+  "include": ["lib/**/*"],
+  "exclude": ["node_modules"],
+  "compilerOptions": {
+    "noImplicitAny": true,
+    "esModuleInterop": true,
+    "sourceMap": true,
+    "module": "commonjs",
+    "target": "es6",
+    "baseUrl": ".",
+    "paths": {
+      "@/*": ["./*"]
+    }
+  }
+}

@@ -48,7 +48,7 @@ hakka.inspect('來去')
 
 ``` js
 [
-  Inspector {
+  UniHakkaInspector {
     position: [ 0, 2 ],
     original: '',
     code: 'e72c',
@@ -63,13 +63,18 @@ hakka.inspect('來去')
 * 教育部《臺灣客家語常用詞辭典》
 * 客家委員會 2009 年《客語造字檔內碼表》
 * 客家委員會《客語能力認證基本詞彙》
-* 2011-2019 年全國語文競賽客家語朗讀
+* 2011 至 2019 年全國語文競賽客家語朗讀
 
 ## References 參考資料
 
 * [CHISE IDS 漢字検索](http://www.chise.org/ids-find)
 * [CNS11643 中文全字庫](https://www.cns11643.gov.tw/index.jsp)
 * [本土語言外字表 - 再會豆腐字](https://tauhu.tw/gua-ji-pio/)
+
+## Contributers 貢獻者
+
+* [Hsu Subang](https://github.com/m80126colin)
+* [David Kuo](https://github.com/david50407)
 
 ## License 授權
 
